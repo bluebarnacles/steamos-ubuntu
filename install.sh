@@ -88,11 +88,11 @@ if [[ "${INCLUDE_GPU_DRIVERS}" == "true" ]]; then
 			echo "Installing the latest Nvidia drivers..."
 			add-apt-repository ppa:graphics-drivers/ppa -y
 			apt update
-			apt install nvidia-driver-415 -y
+			apt install nvidia-driver-418 -y
 			;;
 		amd)
 			echo "Installing the latest AMD drivers..."
-			add-apt-repository ppa:oibaf/graphics-drivers -y
+			add-apt-repository ppa:kisak/kisak-mesa -y
 			apt update
 			apt dist-upgrade -y
 
@@ -102,7 +102,7 @@ if [[ "${INCLUDE_GPU_DRIVERS}" == "true" ]]; then
 			;;
 		intel)
 			echo "Installing the latest mesa drivers..."
-			add-apt-repository ppa:paulo-miguel-dias/pkppa -y
+			add-apt-repository ppa:kisak/kisak-mesa -y
 			apt update
 			apt dist-upgrade -y
 
